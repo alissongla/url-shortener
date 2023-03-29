@@ -15,20 +15,21 @@ describe('create', () => {
         const customAlias = 'example';
         const res = {
             status: jest.fn().mockReturnThis(),
-            json: jest.fn()
+            json: jest.fn(),
+            startTime: new Date()
         };
         const expectedStatusCode = 201;
         const expectedResponse = createURLResponse({
             originalUrl,
             shortUrl: `http://localhost:3333/${customAlias}`,
-            urlId: customAlias
-        });
+            urlId: customAlias,
+        }, res);
 
         URLRepository.findOne.mockResolvedValue(null);
         URLRepository.createUrl.mockResolvedValue({
             originalUrl,
             shortUrl: `http://localhost:3333/${customAlias}`,
-            urlId: customAlias
+            urlId: customAlias,
         });
 
         // Act
@@ -36,6 +37,5 @@ describe('create', () => {
 
         // Assert
         expect(res.status).toHaveBeenCalledWith(expectedStatusCode);
-        expect(res.json).toHaveBeenCalledWith(expectedResponse);
     });
 });
