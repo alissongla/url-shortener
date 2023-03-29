@@ -26,6 +26,10 @@ const URLRepository = {
     async updateAccessCount(url){
         url.accessCount++;
         url.save();
+    },
+
+    async findMostAccessed(){
+        return Url.find().sort({accessCount: -1}).limit(10);
     }
 }
 
