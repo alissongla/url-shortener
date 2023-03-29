@@ -19,11 +19,6 @@ describe('create', () => {
             startTime: new Date()
         };
         const expectedStatusCode = 201;
-        const expectedResponse = createURLResponse({
-            originalUrl,
-            shortUrl: `http://localhost:3333/${customAlias}`,
-            urlId: customAlias,
-        }, res);
 
         URLRepository.findOne.mockResolvedValue(null);
         URLRepository.createUrl.mockResolvedValue({
