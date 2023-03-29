@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  server:
+    container_name: url-shortener-server
+    build:
+      context: .
+      dockerfile: '.docker/Dockerfile'
+    volumes:
+      - ./:/node-app
+      - ./node_modules:/node-app/node_modules
+    environment:
+      NODE_ENV: ${NODE_ENV}
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - '9000:9000'
+
+  db:
+    image: 'mongo'
+    container_name: url-shortener-db
+    ports:
+      - '27018:27018'
+    volumes:
+      - ./.docker/data/db:/data/db
