@@ -1,7 +1,6 @@
 const { create } = require('../../../../app/application/use_cases/URL/create');
 const URLRepository = require('../../../../app/infrastructure/repositories/URLRepository');
 const { createURLResponse } = require('../../../../app/ports/http/responses/createURLResponse');
-const URLController = require("../../../../app/ports/http/controllers/URLController");
 
 jest.mock('../../../../app/infrastructure/repositories/URLRepository');
 

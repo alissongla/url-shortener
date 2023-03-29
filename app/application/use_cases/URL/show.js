@@ -1,4 +1,3 @@
-const Url = require("../../../infrastructure/database/schemas/Url");
 const {findByCustomAlias, updateAccessCount} = require("../../../infrastructure/repositories/URLRepository");
 const {UrlNotFoundResponse} = require("../../../ports/http/responses/UrlNotFoundResponse");
 

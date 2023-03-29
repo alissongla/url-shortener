@@ -1,6 +1,5 @@
 const shortid = require("shortid");
 const utils = require("../../../Util/util");
-const Url = require("../../../infrastructure/database/schemas/Url");
 const URLRepository = require("../../../infrastructure/repositories/URLRepository");
 const {createURLResponse} = require("../../../ports/http/responses/createURLResponse");
 const {customAliasAlreadyExistsError} = require("../../../ports/http/responses/customAliasAlreadyExistsErrorResponse");

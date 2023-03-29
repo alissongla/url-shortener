@@ -1,6 +1,5 @@
 const { create } = require("../../../application/use_cases/URL/create");
 const { show } = require("../../../application/use_cases/URL/show");
-const Url = require("../../../infrastructure/database/schemas/Url");
 
 const URLController = {
     async create(req, res) {
