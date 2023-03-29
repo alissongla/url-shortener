@@ -87,3 +87,14 @@ Não há requerimentos específicos para linguagens, somos poliglotas. Utilize a
 3. Crie um *client* para chamar sua API
 4. Faça um diagrama de sequencia da implementação feita nos casos de uso (Dica, use o https://www.websequencediagrams.com/)
 5. Monte um deploy da sua solução utilizando containers 
+
+## Instruções do Projeto
+1. Copie o arquivo .env.example para .env e configure as variáveis de ambiente.
+2. Execute o comando "npm install" para instalar as dependências.
+3. Execute o comando "npm start" para iniciar o servidor ou se preferir "npm run dev" para iniciar o servidor em modo de desenvolvimento.
+
+## Testes
+1. Execute o comando "npm test" para executar os testes.
+
+## Opcionais
+1. Pode ser utilizado o Docker Compose para rodar o projeto, para isso configure as variaveis de ambiente e execute o comando "docker-compose up -d" na raiz do projeto.

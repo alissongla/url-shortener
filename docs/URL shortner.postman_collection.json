@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "31aa3857-fe89-427b-8b31-d7a49bedc80f",
+		"name": "URL shortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create without custom alias",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3333/api/create?url=www.teste.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"create"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "www.teste.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create with custom alias",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3333/api/create?url=www.teste.com&CUSTOM_ALIAS=teste",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"create"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "www.teste.com"
+						},
+						{
+							"key": "CUSTOM_ALIAS",
+							"value": "teste"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10 most accessed urls",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
